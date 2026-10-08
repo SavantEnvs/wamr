@@ -1,0 +1,9 @@
+project: savantenvs/wamr
+target: wamr_fuzz_aot_compiler
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/wamr_fuzz_aot_compiler/testsuite
+cmds:
+  - cmd: /mayhem/wamr_fuzz_aot_compiler
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/wamr_fuzz.dict
